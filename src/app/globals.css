@@ -1,26 +1,125 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --gray-0: #fff;
+  --gray-50: #f5f7fb;
+  --gray-100: #e9ecf2;
+  --gray-200: #d3d8e3;
+  --gray-300: #bac2d4;
+  --gray-400: #9da7bb;
+  --gray-500: #8894ab;
+  --gray-600: #6a778f;
+  --gray-700: #525e75;
+  --gray-800: #353d4e;
+  --gray-900: #151b26;
+  --gray-950: #0b0e13;
+
+  --blue-30: #f5faff;
+  --blue-50: #edf7ff;
+  --blue-100: #d6ebff;
+  --blue-200: #b5deff;
+  --blue-300: #83caff;
+  --blue-400: #48acff;
+  --blue-500: #1e86ff;
+  --blue-600: #0664ff;
+  --blue-700: #0048e8;
+  --blue-800: #083dc5;
+  --blue-900: #0d399b;
+  --blue-950: #0e245d;
+
+  --yellow-orange-30: #fff9ef;
+  --yellow-orange-50: #fff7eb;
+  --yellow-orange-100: #ffe9c6;
+  --yellow-orange-200: #ffd188;
+  --yellow-orange-300: #ffb145;
+  --yellow-orange-400: #ff9820;
+  --yellow-orange-500: #f97207;
+  --yellow-orange-600: #dd4e02;
+  --yellow-orange-700: #b73206;
+  --yellow-orange-800: #94260c;
+  --yellow-orange-900: #7a210d;
+  --yellow-orange-950: #460d02;
+
+  --header-height: 3.5rem;
+}
+
+@theme {
+  --text-h1: 1.625rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--blue-700);
+  --color-secondary: var(--yellow-orange-300);
+
+  --color-background: var(--gray-0);
+  --color-foreground: var(--gray-950);
+
+  --color-gray-0: var(--gray-0);
+  --color-gray-50: var(--gray-50);
+  --color-gray-100: var(--gray-100);
+  --color-gray-200: var(--gray-200);
+  --color-gray-300: var(--gray-300);
+  --color-gray-400: var(--gray-400);
+  --color-gray-500: var(--gray-500);
+  --color-gray-600: var(--gray-600);
+  --color-gray-700: var(--gray-700);
+  --color-gray-800: var(--gray-800);
+  --color-gray-900: var(--gray-900);
+  --color-gray-950: var(--gray-950);
+
+  --color-blue-30: var(--blue-30);
+  --color-blue-50: var(--blue-50);
+  --color-blue-100: var(--blue-100);
+  --color-blue-200: var(--blue-200);
+  --color-blue-300: var(--blue-300);
+  --color-blue-400: var(--blue-400);
+  --color-blue-500: var(--blue-500);
+  --color-blue-600: var(--blue-600);
+  --color-blue-700: var(--blue-700);
+  --color-blue-800: var(--blue-800);
+  --color-blue-900: var(--blue-900);
+  --color-blue-950: var(--blue-950);
+
+  --color-yellow-orange-30: var(--yellow-orange-30);
+  --color-yellow-orange-50: var(--yellow-orange-50);
+  --color-yellow-orange-100: var(--yellow-orange-100);
+  --color-yellow-orange-200: var(--yellow-orange-200);
+  --color-yellow-orange-300: var(--yellow-orange-300);
+  --color-yellow-orange-400: var(--yellow-orange-400);
+  --color-yellow-orange-500: var(--yellow-orange-500);
+  --color-yellow-orange-600: var(--yellow-orange-600);
+  --color-yellow-orange-700: var(--yellow-orange-700);
+  --color-yellow-orange-800: var(--yellow-orange-800);
+  --color-yellow-orange-900: var(--yellow-orange-900);
+  --color-yellow-orange-950: var(--yellow-orange-950);
+
+  --spacing-header-height: var(--header-height);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .typography {
+    h1 {
+      @apply text-sm text-blue-500 font-bold;
+    }
+    h2 {
+      @apply text-h1 text-gray-950 font-bold;
+    }
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-primary-linear {
+  @apply bg-gradient-to-r from-blue-600 to-[#14358c];
 }
