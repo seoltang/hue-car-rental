@@ -3,8 +3,8 @@
 import { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'motion/react';
-import carImg from '@/assets/3d/car.png';
-import moneyImg from '@/assets/3d/money.png';
+import carImg from '@/assets/images/3d/car.png';
+import moneyImg from '@/assets/images/3d/money.png';
 import LandingTitle from './landing-title';
 
 const LandingSection = () => {
