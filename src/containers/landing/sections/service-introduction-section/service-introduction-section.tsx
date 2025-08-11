@@ -26,9 +26,9 @@ const ServiceIntroductionSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="-mt-[100px] z-[1] flex flex-col items-stretch justify-center bg-white px-4 rounded-t-[100px] overflow-hidden"
+      className="-mt-[100px] z-[1] flex flex-col items-stretch justify-center bg-white rounded-t-[100px] overflow-hidden"
     >
-      <div className="flex flex-col items-stretch py-20">
+      <div className="flex flex-col items-stretch px-4 py-20">
         <SectionTitle title="서비스 소개" subTitle="신차 장기렌트란?" />
         <p className="mt-10 mb-3 text-sm text-gray-950 leading-[-2%] text-center">
           소유 대신 이용,
