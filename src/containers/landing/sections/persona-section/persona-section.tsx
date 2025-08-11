@@ -2,6 +2,7 @@
 
 import { type ReactNode, useCallback, useEffect, useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
+import { motion } from 'motion/react';
 import useEmblaCarousel from 'embla-carousel-react';
 import type { EmblaCarouselType } from 'embla-carousel';
 import { cn } from '@/styles/utils';
@@ -9,6 +10,7 @@ import persona1 from '@/assets/images/landing/persona-1.png';
 import persona2 from '@/assets/images/landing/persona-2.png';
 import persona3 from '@/assets/images/landing/persona-3.png';
 import lineMobile from '@/assets/images/landing/line-sm.png';
+import lineDesktop from '@/assets/images/landing/line-lg.png';
 import SectionTitle from '../section-title';
 import PersonaCard from './persona-card';
 
@@ -101,7 +103,7 @@ const PersonaSection = () => {
   );
 
   return (
-    <section className="relative z-[1] flex flex-col items-center -mt-[100px] px-4 xl:px-60 py-20 xl:py-40 bg-gray-50 rounded-t-[100px]">
+    <section className="relative z-[1] flex flex-col items-center -mt-[100px] xl:-mt-[400px] px-4 xl:px-60 py-20 xl:py-40 bg-gray-50 rounded-t-[100px] xl:rounded-t-[400px]">
       <SectionTitle
         title="차량 구매 전에 꼭 확인하세요"
         subTitle={`신차 장기렌트, 이런 분들께 유리합니다.`}
@@ -109,11 +111,11 @@ const PersonaSection = () => {
       />
 
       {/* 모바일: 캐러셀 */}
-      <div className="relative mt-[50px] w-full xl:hidden">
+      <div className="relative mt-[50px] xl:mt-25 w-full xl:hidden">
         <Image
           src={lineMobile}
           alt="line"
-          className="absolute -z-[2] left-1/2 -translate-x-1/2 w-72 top-14"
+          className="absolute -z-[2] left-1/2 -translate-x-1/2 w-72 top-14 xl:hidden"
         />
         <div className="overflow-hidden w-full" ref={emblaRef}>
           <div className="flex -ml-4 items-stretch">
@@ -142,11 +144,22 @@ const PersonaSection = () => {
       </div>
 
       {/* 데스크탑: flex row 배치 */}
-      <div className="hidden xl:flex w-full justify-center gap-[60px] mt-20">
+      <div className="relative hidden xl:flex w-full justify-center gap-[60px] mt-20">
+        <Image
+          src={lineDesktop}
+          alt="line"
+          className="absolute -z-[2] left-1/2 -translate-x-1/2 w-full max-w-5xl -top-6 hidden xl:block"
+        />
         {SLIDES.map((persona, idx) => (
-          <div key={idx} className="flex-shrink-0 basis-1/3">
+          <motion.div
+            key={idx}
+            className="flex-shrink-0 basis-1/3 flex items-stretch"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: idx * 0.2 }}
+          >
             <PersonaCard {...persona} />
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

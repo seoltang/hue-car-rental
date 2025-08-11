@@ -100,7 +100,7 @@ const ReviewSection = () => {
         <ReviewGrid />
       </section>
 
-      <div className="relative z-[1] px-4 py-[100px] bg-white">
+      <div className="relative z-[1] px-4 xl:px-60 py-[100px] xl:py-[300px] bg-white">
         <TwoRowText
           firstLine="현명한 소비, 합리적인 선택"
           secondLine="지금 바로 시작하세요."

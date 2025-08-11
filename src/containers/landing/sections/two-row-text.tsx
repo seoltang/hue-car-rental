@@ -25,7 +25,7 @@ const TwoRowText = ({
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center gap-y-1 text-white text-center',
+        'flex flex-col items-center justify-center gap-y-1 xl:gap-y-2 text-white text-center tracking-[-2%]',
         wrapperClassName,
       )}
     >
@@ -44,7 +44,7 @@ const TwoRowText = ({
         whileInView={!secondLineStyle ? { opacity: 1, y: 0 } : undefined}
         transition={!secondLineStyle ? { duration: 0.5, delay: 0.25 } : undefined}
         className={cn(
-          'text-2xl xl:text-5xl font-bold px-4 py-1 bg-primary-linear',
+          'text-2xl xl:text-5xl font-bold px-4 py-1 xl:py-2.5 bg-primary-linear',
           secondLineClassName,
         )}
       >

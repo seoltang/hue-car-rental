@@ -21,10 +21,10 @@ const PersonaCard = ({
   description,
 }: Props) => {
   return (
-    <div className="mt-32 xl:mt-64 w-full max-w-60 xl:max-w-none flex flex-col items-center">
+    <div className="flex-grow mt-32 xl:mt-64 w-full max-w-60 xl:max-w-none flex flex-col items-center">
       <article
         className={cn(
-          'relative mb-6 mx-auto flex flex-col gap-y-2.5 rounded-[10px] bg-white shadow-[0px_1.2px_6px_0px_rgba(0,0,0,0.10)] p-5 whitespace-pre-line tracking-[-2%]',
+          'flex-grow relative mb-6 mx-auto flex flex-col gap-y-2.5 rounded-[10px] bg-white shadow-[0px_1.2px_6px_0px_rgba(0,0,0,0.10)] p-5 whitespace-pre-line tracking-[-2%]',
           'w-full xl:p-10 xl:rounded-[20px] xl:shadow-[0px_2.4px_12px_0px_rgba(0,0,0,0.10)] xl:gap-y-5',
         )}
       >
@@ -44,20 +44,20 @@ const PersonaCard = ({
         </div>
 
         <motion.div
-          className="flex flex-col gap-y-2.5"
+          className="flex-grow flex flex-col gap-y-2.5"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.1 }}
         >
-          <p className="text-xs font-bold text-primary">NEEDS</p>
-          <h3 className="text-base text-gray-950">
+          <p className="text-xs xl:text-lg font-bold text-primary">NEEDS</p>
+          <h3 className="text-base xl:text-28 text-gray-950">
             <span className="font-semibold">{nameLine1}</span>
             <br />
             {nameLine2}
           </h3>
 
-          <p className="text-xs font-bold text-secondary">SOLUTION</p>
-          <p className="text-base font-semibold text-gray-950">{solutionTitle}</p>
+          <p className="text-xs xl:text-lg font-bold text-secondary">SOLUTION</p>
+          <p className="text-base xl:text-28 font-semibold text-gray-950">{solutionTitle}</p>
 
           <div className="flex flex-col gap-y-0.5 description">{description}</div>
         </motion.div>
