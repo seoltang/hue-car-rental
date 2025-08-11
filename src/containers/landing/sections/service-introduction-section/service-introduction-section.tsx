@@ -20,9 +20,6 @@ const ServiceIntroductionSection = () => {
   const included = useTransform(scrollYProgress, [0.25, 0.35], [0, 1]);
   const returnOrAcquire = useTransform(scrollYProgress, [0.35, 0.45], [0, 1]);
 
-  const firstLineOpacity = useTransform(scrollYProgress, [0.45, 0.55], [0, 1]);
-  const secondLineOpacity = useTransform(scrollYProgress, [0.55, 0.65], [0, 1]);
-
   return (
     <section
       ref={sectionRef}
@@ -108,12 +105,6 @@ const ServiceIntroductionSection = () => {
           firstLine="운전만 하세요"
           secondLine="그 외는 저희가 처리합니다."
           firstLineClassName="text-gray-950"
-          firstLineStyle={{
-            opacity: firstLineOpacity,
-          }}
-          secondLineStyle={{
-            opacity: secondLineOpacity,
-          }}
         />
       </div>
     </section>

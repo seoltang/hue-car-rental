@@ -31,14 +31,20 @@ const TwoRowText = ({
     >
       <motion.p
         style={firstLineStyle}
-        className={cn('text-xl lg:text-40 font-medium', firstLineClassName)}
+        initial={!firstLineStyle ? { opacity: 0, y: 30 } : undefined}
+        whileInView={!firstLineStyle ? { opacity: 1, y: 0 } : undefined}
+        transition={!firstLineStyle ? { duration: 0.5, delay: 0 } : undefined}
+        className={cn('text-xl xl:text-40 font-medium', firstLineClassName)}
       >
         {firstLine}
       </motion.p>
       <motion.p
         style={secondLineStyle}
+        initial={!secondLineStyle ? { opacity: 0, y: 30 } : undefined}
+        whileInView={!secondLineStyle ? { opacity: 1, y: 0 } : undefined}
+        transition={!secondLineStyle ? { duration: 0.5, delay: 0.25 } : undefined}
         className={cn(
-          'text-2xl lg:text-5xl font-bold px-4 py-1 bg-primary-linear',
+          'text-2xl xl:text-5xl font-bold px-4 py-1 bg-primary-linear',
           secondLineClassName,
         )}
       >

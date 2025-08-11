@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/components/layout/header';
+import FloatingContact from '@/components/layout/floating-contact';
 
 export const metadata: Metadata = {
   title: '휴렌터카',
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body className="antialiased relative">
         <Header />
         <main className="w-full min-h-dvh">{children}</main>
+        <FloatingContact />
       </body>
     </html>
   );
