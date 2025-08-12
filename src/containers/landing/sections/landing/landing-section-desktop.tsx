@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import TwoRowText from '../two-row-text';
-import landingImg from '@/assets/images/landing/landing.jpg';
+import landingImg from '@/assets/images/landing/landing.png';
 
 const LandingSectionDesktop = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -15,7 +15,7 @@ const LandingSectionDesktop = () => {
   const badgeScale = useTransform(scrollYProgress, [0.15, 0.35], [0.9, 1]);
   const badgeOpacity = useTransform(scrollYProgress, [0.15, 0.35], [0, 1]);
 
-  const carY = useTransform(scrollYProgress, [0, 1], [200, -100]);
+  const carY = useTransform(scrollYProgress, [0, 1], [300, -100]);
   const carScale = useTransform(scrollYProgress, [0, 1], [1.7, 1.2]);
   const vignetteOpacity = useTransform(scrollYProgress, [0, 0.3], [0.2, 0.6]);
 
