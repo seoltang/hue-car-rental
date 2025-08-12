@@ -18,12 +18,12 @@ const ContactButton = ({ href, label, image }: Props) => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full"
+      className="w-full xl:max-w-[690px]"
     >
       <Link
         href={href}
         className={cn(
-          'group relative block w-full aspect-[343/132] xl:w-[690px] xl:h-[264px] overflow-hidden rounded-md md:rounded-lg xl:rounded-xl border-1 xl:border-2 border-gray-800 active:border-primary',
+          'group relative block w-full aspect-[343/132] overflow-hidden rounded-md md:rounded-lg xl:rounded-xl border-1 xl:border-2 border-gray-800 active:border-primary',
         )}
         target="_blank"
         rel="noopener noreferrer"
