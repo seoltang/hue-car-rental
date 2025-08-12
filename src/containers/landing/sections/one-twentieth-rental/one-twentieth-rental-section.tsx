@@ -15,7 +15,7 @@ const OneTwentiethRentalSection = () => {
       <Image
         src={roadLargeImg}
         alt="도로 위 차량"
-        className="h-full min-h-[1200px] max-h-screen aspect-[1440/1200] hidden xl:block object-cover"
+        className="size-full min-h-[1200px] max-h-screen aspect-[1440/1200] hidden xl:block object-cover"
       />
       <div className="absolute inset-0 z-[1] size-full bg-radial from-black/20 from 0% to-black/80 to 20%" />
 

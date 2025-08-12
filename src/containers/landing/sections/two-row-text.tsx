@@ -25,7 +25,7 @@ const TwoRowText = ({
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center gap-y-1 xl:gap-y-2 text-white text-center tracking-[-2%]',
+        'flex flex-col items-center justify-center gap-y-1 md:gap-y-1.5 xl:gap-y-2 text-white text-center tracking-[-2%]',
         wrapperClassName,
       )}
     >
@@ -34,7 +34,7 @@ const TwoRowText = ({
         initial={!firstLineStyle ? { opacity: 0, y: 30 } : undefined}
         whileInView={!firstLineStyle ? { opacity: 1, y: 0 } : undefined}
         transition={!firstLineStyle ? { duration: 0.5, delay: 0 } : undefined}
-        className={cn('text-xl xl:text-40 font-medium', firstLineClassName)}
+        className={cn('text-xl md:text-30 xl:text-40 font-medium', firstLineClassName)}
       >
         {firstLine}
       </motion.p>
@@ -44,7 +44,7 @@ const TwoRowText = ({
         whileInView={!secondLineStyle ? { opacity: 1, y: 0 } : undefined}
         transition={!secondLineStyle ? { duration: 0.5, delay: 0.25 } : undefined}
         className={cn(
-          'text-2xl xl:text-5xl font-bold px-4 py-1 xl:py-2.5 bg-primary-linear',
+          'text-2xl md:text-36 xl:text-5xl font-bold px-4 py-1 xl:py-2.5 bg-primary-linear',
           secondLineClassName,
         )}
       >

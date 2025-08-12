@@ -15,7 +15,7 @@ const BenefitCard = ({ index, title, description, img }: Props) => {
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="relative w-[300px] xl:w-[600px] p-5 xl:p-10 bg-white rounded-[10px] xl:rounded-[20px] shadow-[0px_1.2px_6px_0px_rgba(0,0,0,0.10)] xl:shadow-[0px_2.4px_12px_0px_rgba(0,0,0,0.10)] border border-gray-100 flex items-end justify-between whitespace-pre-line"
+      className="relative w-[300px] xl:w-[600px] max-xl:h-[7.5rem] p-5 xl:p-10 bg-white rounded-[10px] xl:rounded-[20px] shadow-[0px_1.2px_6px_0px_rgba(0,0,0,0.10)] xl:shadow-[0px_2.4px_12px_0px_rgba(0,0,0,0.10)] border border-gray-100 flex justify-between items-center whitespace-pre-line"
     >
       <div
         className={cn(

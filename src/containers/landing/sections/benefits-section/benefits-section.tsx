@@ -14,7 +14,7 @@ const BENEFITS = [
       <Image
         src={benefitImg1}
         alt="중간 수수료 없이 더 합리적인 가격"
-        className="w-[102px] xl:w-[204px]"
+        className="w-[102px] xl:w-[204px] self-end"
       />
     ),
   },
@@ -25,7 +25,7 @@ const BENEFITS = [
       <Image
         src={benefitImg2}
         alt="최다 조건 비교 후 최적의 조건 제공"
-        className="w-[114px] xl:w-[228px]"
+        className="w-[114px] xl:w-[228px] self-center"
       />
     ),
   },
@@ -36,7 +36,7 @@ const BENEFITS = [
       <Image
         src={benefitImg3}
         alt="강요 없는 1:1 고객 맞춤 상담"
-        className="w-[121px] xl:w-[242px]"
+        className="w-[121px] xl:w-[242px] self-center"
       />
     ),
   },
@@ -47,7 +47,7 @@ const BENEFITS = [
       <Image
         src={benefitImg4}
         alt="신뢰할 수 있는 거래 환경 제공"
-        className="w-[110px] xl:w-[220px]"
+        className="w-[110px] xl:w-[220px] self-center"
       />
     ),
   },

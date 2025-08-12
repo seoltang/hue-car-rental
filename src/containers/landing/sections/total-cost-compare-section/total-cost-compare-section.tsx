@@ -6,7 +6,7 @@ import totalCostDesktopImg from '@/assets/images/landing/total-cost-lg.png';
 
 const TotalCostCompareSection = () => {
   return (
-    <section className="relative z-[1] flex flex-col items-center gap-y-10 xl:gap-y-25 py-20 xl:py-40 px-4 xl:px-60 bg-white">
+    <section className="relative z-[1] flex flex-col items-center gap-y-10 xl:gap-y-25 py-20 md:py-30 xl:py-40 px-4 md:px-30 xl:px-60 bg-white">
       <SectionTitle
         title="인수 시 총 비용 비교"
         subTitle={`렌트는 손해? 계산기 두드려보면 다릅니다`}

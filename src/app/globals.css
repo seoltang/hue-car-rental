@@ -49,11 +49,14 @@
   --text-10: 0.625rem; /* 10px */
   --text-26: 1.625rem; /* 26px */
   --text-28: 1.75rem; /* 28px */
+  --text-30: 1.875rem; /* 30px */
   --text-32: 2rem; /* 32px */
+  --text-36: 2.25rem; /* 36px */
   --text-38: 2.375rem; /* 38px */
   --text-40: 2.5rem; /* 40px */
   --text-52: 3.25rem; /* 52px */
 
+  --breakpoint-md: 768px;
   --breakpoint-xl: 1440px;
 }
 
@@ -109,19 +112,19 @@
 @layer components {
   .title {
     h1 {
-      @apply text-sm xl:text-xl font-bold;
+      @apply text-sm md:text-base xl:text-xl font-bold;
     }
     h2 {
-      @apply text-26 xl:text-52 font-bold;
+      @apply text-26 md:text-38 xl:text-52 font-bold;
     }
   }
 
   .description {
     p {
-      @apply text-xs xl:text-lg text-gray-800;
+      @apply text-xs md:text-sm xl:text-lg text-gray-800;
     }
     small {
-      @apply text-7 xl:text-sm text-gray-500;
+      @apply text-7 md:text-10 xl:text-sm text-gray-500;
     }
   }
 }

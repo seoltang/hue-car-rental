@@ -153,7 +153,7 @@ const PersonaSection = () => {
         {SLIDES.map((persona, idx) => (
           <motion.div
             key={idx}
-            className="flex-shrink-0 basis-1/3 flex items-stretch"
+            className="flex-shrink-0 basis-[385px] flex items-stretch"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: idx * 0.2 }}

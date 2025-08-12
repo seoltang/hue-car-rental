@@ -20,7 +20,7 @@ const SectionTitle = ({
   return (
     <div
       className={cn(
-        'title flex flex-col items-center justify-center gap-y-2 xl:gap-y-4 text-center leading-[-2%] whitespace-pre-line',
+        'title flex flex-col items-center justify-center gap-y-2 md:gap-y-3 xl:gap-y-4 text-center leading-[-2%] whitespace-pre-line',
         wrapperClassName,
       )}
     >
