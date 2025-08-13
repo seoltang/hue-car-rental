@@ -10,7 +10,7 @@ import RentalPercentage from './rental-percentage';
 
 const RegisteredCarsNumberSection = () => {
   return (
-    <section className="flex flex-col items-center justify-center gap-y-20 py-[120px] px-4 xl:px-16 xl:py-40">
+    <section className="flex flex-col items-center justify-center gap-y-20 py-30 px-4 xl:px-16 xl:py-60">
       <SectionTitle title="자동차 VS 렌터카" subTitle="누적 등록 대수" />
 
       <div className="flex flex-col xl:flex-row items-center justify-center gap-y-6 xl:gap-x-[4.5rem]">
@@ -19,7 +19,7 @@ const RegisteredCarsNumberSection = () => {
             className="absolute inset-0 z-[1] flex items-center justify-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <CarPercentage />
           </motion.div>
@@ -44,7 +44,7 @@ const RegisteredCarsNumberSection = () => {
             className="absolute inset-0 z-[1] flex items-center justify-center"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <RentalPercentage />
           </motion.div>
