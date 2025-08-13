@@ -94,7 +94,7 @@ const ServiceIntroductionSection = () => {
       <div className="bg-blue-30 px-4 py-[6.25rem] xl:py-60">
         <TwoRowText
           firstLine="운전만 하세요"
-          secondLine="그 외는 저희가 처리합니다."
+          secondLine="그 외는 저희가 처리합니다"
           firstLineClassName="text-gray-950"
         />
       </div>

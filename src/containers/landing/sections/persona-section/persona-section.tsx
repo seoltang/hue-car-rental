@@ -106,8 +106,8 @@ const PersonaSection = () => {
     <section className="relative z-[1] flex flex-col items-center -mt-[100px] xl:-mt-[400px] px-4 xl:px-60 py-20 xl:py-40 bg-gray-50 rounded-t-[100px] xl:rounded-t-[400px]">
       <SectionTitle
         title="차량 구매 전에 꼭 확인하세요"
-        subTitle={`신차 장기렌트, 이런 분들께 유리합니다.`}
-        mobileSubTitle={`신차 장기렌트,\n이런 분들께 유리합니다.`}
+        subTitle={`신차 장기렌트, 이런 분들께 유리합니다`}
+        mobileSubTitle={`신차 장기렌트,\n이런 분들께 유리합니다`}
       />
 
       {/* 모바일: 캐러셀 */}

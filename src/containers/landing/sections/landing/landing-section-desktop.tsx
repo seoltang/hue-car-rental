@@ -33,7 +33,7 @@ const LandingSectionDesktop = () => {
       <div className="relative z-10 h-full grid place-items-center">
         <TwoRowText
           firstLine="차값, 이제는 ‘지출’이 아니라"
-          secondLine="‘절약’으로 바꿔야 할 때입니다."
+          secondLine="‘절약’으로 바꿔야 할 때입니다"
           firstLineStyle={{ opacity: headlineOpacity, y: headlineY }}
           secondLineStyle={{ opacity: badgeOpacity, scale: badgeScale }}
         />

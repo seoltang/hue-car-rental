@@ -14,7 +14,7 @@ const LandingTitle = ({ progress }: Props) => {
   return (
     <TwoRowText
       firstLine="차값, 이제는 ‘지출’이 아니라"
-      secondLine="‘절약’으로 바꿔야 할 때입니다."
+      secondLine="‘절약’으로 바꿔야 할 때입니다"
       firstLineStyle={{ opacity: firstLineOpacity }}
       secondLineStyle={{ opacity: secondLineOpacity }}
       wrapperClassName="z-[1]"
