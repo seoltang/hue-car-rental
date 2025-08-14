@@ -33,6 +33,7 @@ const LandingSection = () => {
     <section ref={sectionRef} className="relative z-0 w-full pt-[90vh] pb-[33vh] bg-gray-900">
       <Image
         src={landingMoneyImg}
+        priority
         alt="landing-money"
         width={655}
         height={655}
