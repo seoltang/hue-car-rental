@@ -14,7 +14,7 @@ const Header = () => {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        setVisible(window.scrollY > 120);
+        setVisible(window.scrollY > window.innerHeight * 0.5);
         ticking = false;
       });
     };
