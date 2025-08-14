@@ -10,7 +10,7 @@ const ServiceIntroductionSection = () => {
     <section className="-mt-[100px] xl:-mt-[400px] z-[1] flex flex-col items-stretch justify-center bg-white rounded-t-[100px] xl:rounded-t-[400px] overflow-hidden">
       <div className="flex flex-col items-stretch px-4 py-20 md:px-30 xl:px-60 xl:py-40">
         <SectionTitle title="서비스 소개" subTitle="신차 장기렌트란?" />
-        <p className="mt-10 xl:mt-20 mb-3 text-sm xl:text-28 text-gray-950 text-center">
+        <p className="my-10 xl:my-20 text-sm xl:text-28 text-gray-950 text-center">
           소유 대신 이용,
           <br />
           <strong className="font-semibold">비용은 줄이고 편의는 늘린</strong> 자동차 소비
@@ -19,7 +19,7 @@ const ServiceIntroductionSection = () => {
 
         <div className="flex justify-center gap-x-3.5 xl:gap-x-15 text-center break-keep">
           <div className="flex flex-col items-stretch max-w-[420px]">
-            <Image src={questionMarkImg} alt="물음표" />
+            <Image src={questionMarkImg} alt="물음표" className="-mb-px" />
             <h4 className="px-3 xl:px-5 py-2 xl:py-6 bg-gray-400 rounded-t-lg xl:rounded-t-3xl shadow-[0px_2px_10px_0px_rgba(20,20,20,0.25)] xl:shadow-[0px_6px_30px_0px_rgba(20,20,20,0.25)] flex items-center justify-center text-center text-white text-sm xl:text-38 font-semibold">
               신차를 할부로 구매하면?
             </h4>
@@ -39,7 +39,7 @@ const ServiceIntroductionSection = () => {
           </div>
 
           <div className="flex flex-col items-stretch max-w-[420px]">
-            <Image src={exclamationMarkImg} alt="느낌표" />
+            <Image src={exclamationMarkImg} alt="느낌표" className="-mb-px" />
             <h4 className="px-3 xl:px-5 py-2 xl:py-6 bg-primary rounded-t-lg xl:rounded-t-3xl shadow-[0px_2px_10px_0px_rgba(20,20,20,0.25)] xl:shadow-[0px_6px_30px_0px_rgba(20,20,20,0.25)] flex items-center justify-center text-center text-white text-sm xl:text-38 font-semibold">
               신차를 장기렌트 한다면?
             </h4>
