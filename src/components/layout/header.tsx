@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import logo from '@/assets/logo.svg';
+import { cn } from '@/styles/utils';
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
@@ -24,10 +25,12 @@ const Header = () => {
 
   return (
     <header
-      className={
-        'fixed top-0 inset-x-0 z-50 w-full h-header-height px-12 py-3.5 inline-flex flex-col justify-center items-center bg-white shadow-[0px_2.4px_12px_0px_rgba(0,0,0,0.08)] transition-all duration-300 ' +
-        (visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full')
-      }
+      className={cn(
+        'fixed top-0 inset-x-0 z-50 w-full h-header-height px-12 py-3.5 inline-flex flex-col justify-center items-center bg-white transition-all duration-300',
+        visible
+          ? 'bg-white shadow-[0px_2.4px_12px_0px_rgba(0,0,0,0.08)]'
+          : 'bg-transparent shadow-none',
+      )}
     >
       <Image src={logo} alt="logo" width={49} height={28} />
     </header>
