@@ -20,7 +20,7 @@ const LandingSection = () => {
   );
   const secondSpanColor = useTransform(
     scrollYProgress,
-    [0.1, 0.3, 0.5],
+    [0.0, 0.3, 0.6],
     ['#ffffff', '#1e86ff', '#ffffff'],
   );
   const thirdSpanColor = useTransform(
@@ -30,7 +30,10 @@ const LandingSection = () => {
   );
 
   return (
-    <section ref={sectionRef} className="relative z-0 w-full pt-[90vh] pb-[33vh] bg-gray-900">
+    <section
+      ref={sectionRef}
+      className="relative z-0 w-full pt-[calc(100vh-52px*0.75)] md:pt-[calc(100vh-80px*0.75)] xl:pt-[calc(100vh-180px*0.75)] pb-[33vh] bg-gray-900"
+    >
       <Image
         src={landingMoneyImg}
         priority
@@ -42,9 +45,9 @@ const LandingSection = () => {
 
       <h1 className="relative w-full text-white text-center text-[52px] md:text-[80px] xl:text-[180px] font-extrabold flex flex-col items-center">
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.75, delay: 0.1 }}
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.75, delay: 0.0 }}
           className="relative z-0"
         >
           <motion.span style={{ color: firstSpanColor }}>차값,</motion.span> 이제는
@@ -60,7 +63,7 @@ const LandingSection = () => {
         <motion.div
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.75, delay: 0.3 }}
+          transition={{ duration: 0.75, delay: 0.5 }}
           className="relative z-0"
         >
           <motion.span style={{ color: thirdSpanColor }}>절약</motion.span>할 때입니다
