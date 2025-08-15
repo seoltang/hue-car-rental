@@ -51,7 +51,7 @@ const ServiceIntroductionSection = () => {
                     className="absolute left-0 bottom-0 h-0.5 xl:h-1.5 w-full bg-primary"
                     initial={{ width: 0 }}
                     whileInView={{ width: '100%' }}
-                    transition={{ duration: 0.5, delay: 0.15 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
                   />
                 </span>
                 <span>으로</span>
@@ -67,7 +67,7 @@ const ServiceIntroductionSection = () => {
                     className="absolute left-0 bottom-0 h-0.5 xl:h-1.5 w-full bg-primary"
                     initial={{ width: 0 }}
                     whileInView={{ width: '100%' }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
+                    transition={{ duration: 0.5, delay: 0.4 }}
                   />
                 </span>
               </p>
@@ -81,7 +81,7 @@ const ServiceIntroductionSection = () => {
                     className="absolute left-0 bottom-0 h-0.5 xl:h-1.5 w-full bg-primary"
                     initial={{ width: 0 }}
                     whileInView={{ width: '100%' }}
-                    transition={{ duration: 0.5, delay: 0.45 }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                   />
                 </span>
                 <span> 선택 가능</span>
