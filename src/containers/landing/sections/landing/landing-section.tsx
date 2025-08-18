@@ -32,7 +32,7 @@ const LandingSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-0 w-full pt-[calc(100vh-52px*0.75)] md:pt-[calc(100vh-80px*0.75)] xl:pt-[calc(100vh-180px*0.75)] pb-[33vh] bg-gray-900"
+      className="relative z-0 w-full pt-[calc(100dvh-52px*0.75)] md:pt-[calc(100vh-80px*0.75)] xl:pt-[calc(100vh-180px*0.75)] pb-[33vh] bg-gray-900"
     >
       <Image
         src={landingMoneyImg}
