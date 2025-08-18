@@ -2,7 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { toast } from 'react-toastify';
 import { cn } from '@/styles/utils';
+import { PHONE_NUMBER, KAKAO_URL } from '@/constants';
+import { isMobile } from '@/utils';
 
 const PhoneIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -79,6 +82,28 @@ const ArrowUpIcon = (props: React.SVGProps<SVGSVGElement>) => (
 const FloatingContact = () => {
   const [showTop, setShowTop] = useState(false);
 
+  const handleClickCall = () => {
+    if (typeof window === 'undefined') return;
+
+    if (isMobile()) {
+      window.open(`tel:${PHONE_NUMBER}`, '_blank');
+      return;
+    }
+
+    navigator.clipboard
+      .writeText(PHONE_NUMBER)
+      .then(() => {
+        toast('전화번호가 복사되었습니다.', { type: 'success' });
+      })
+      .catch(() => {
+        alert(PHONE_NUMBER);
+      });
+  };
+
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   useEffect(() => {
     let ticking = false;
     const onScroll = () => {
@@ -94,20 +119,16 @@ const FloatingContact = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const handleScrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <div
       className="fixed right-4 bottom-6 z-50 flex flex-col items-center justify-between rounded-full bg-white/80 ring-1 ring-black/10 shadow-[0px_2.4px_12px_0px_rgba(0,0,0,0.10)] backdrop-blur-[2px] p-2.5"
       aria-label="빠른 상담 및 상단으로 이동"
     >
-      <Link href="tel:01092742223" aria-label="전화 상담">
+      <button type="button" onClick={handleClickCall} aria-label="전화 상담">
         <PhoneIcon className="size-5 mb-5" />
-      </Link>
+      </button>
 
-      <Link href="https://pf.kakao.com/_vxhKxjn/chat" aria-label="카카오톡 상담">
+      <Link href={KAKAO_URL} aria-label="카카오톡 상담" target="_blank">
         <KakaoIcon
           className={cn('size-5 transition-all duration-300', showTop ? 'mb-5' : 'mb-0')}
         />
