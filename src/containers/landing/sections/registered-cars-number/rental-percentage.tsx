@@ -23,7 +23,7 @@ const RentalPercentage = () => {
       <motion.g
         clipPath="url(#paint0_angular_74_898_clip_path)"
         data-figma-skip-parse="true"
-        initial={{ rotate: -150, opacity: 0 }}
+        initial={{ rotate: -120, opacity: 0 }}
         whileInView={{ rotate: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
         style={{
