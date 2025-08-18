@@ -1,6 +1,6 @@
 import { type ReactNode } from 'react';
 import Image, { type StaticImageData } from 'next/image';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { cn } from '@/styles/utils';
 
 type Props = {

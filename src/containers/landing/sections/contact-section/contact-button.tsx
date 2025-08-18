@@ -1,7 +1,7 @@
 'use client';
 
 import Image, { type StaticImageData } from 'next/image';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import arrowRightIcon from '@/assets/icons/arrow-right.svg';
 import { cn } from '@/styles/utils';
 
