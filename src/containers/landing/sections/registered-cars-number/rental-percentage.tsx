@@ -40,7 +40,6 @@ const RentalPercentage = () => {
                   'conic-gradient(from 90deg,rgba(21, 27, 38, 1) 0deg,rgba(21, 27, 38, 1) 122.885deg,rgba(21, 27, 38, 1) 138.462deg,rgba(20, 53, 140, 1) 185.192deg,rgba(6, 100, 255, 1) 360deg)',
                 height: '100%',
                 width: '100%',
-                opacity: 1,
               }}
             ></div>
           </foreignObject>

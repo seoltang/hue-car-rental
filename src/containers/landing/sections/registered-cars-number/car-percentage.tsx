@@ -38,7 +38,6 @@ const CarPercentage = () => {
                     'conic-gradient(from 90deg,rgba(21, 27, 38, 1) 0deg,rgba(21, 27, 38, 1) 292.5deg,rgba(28, 28, 28, 1) 306deg,rgba(112, 112, 112, 1) 360deg)',
                   height: '100%',
                   width: '100%',
-                  opacity: 1,
                 }}
               ></div>
             </foreignObject>
