@@ -40,7 +40,7 @@ const ServiceIntroductionSection = () => {
 
           <div className="flex flex-col items-stretch max-w-[420px]">
             <Image src={exclamationMarkImg} alt="느낌표" className="-mb-px" />
-            <h4 className="px-3 xl:px-5 py-2 xl:py-6 bg-primary rounded-t-lg xl:rounded-t-3xl shadow-[0px_2px_10px_0px_rgba(20,20,20,0.25)] xl:shadow-[0px_6px_30px_0px_rgba(20,20,20,0.25)] flex items-center justify-center text-center text-white text-sm xl:text-38 font-semibold">
+            <h4 className="px-3 xl:px-5 py-2 xl:py-6 bg-primary-linear rounded-t-lg xl:rounded-t-3xl shadow-[0px_2px_10px_0px_rgba(20,20,20,0.25)] xl:shadow-[0px_6px_30px_0px_rgba(20,20,20,0.25)] flex items-center justify-center text-center text-white text-sm xl:text-38 font-semibold">
               신차를 장기렌트 한다면?
             </h4>
             <div className="h-[6.25rem] xl:h-[17.5rem] px-3 py-2 border-b xl:border-b-3 border-gray-100 flex flex-col justify-center items-center xl:text-32 text-gray-950 font-semibold">
