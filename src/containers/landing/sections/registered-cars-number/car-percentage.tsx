@@ -23,7 +23,11 @@ const CarPercentage = () => {
         initial={{ rotate: -75, opacity: 0 }}
         whileInView={{ rotate: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
-        style={{ willChange: 'transform, opacity' }}
+        style={{
+          transformBox: 'fill-box',
+          transformOrigin: 'center',
+          willChange: 'transform, opacity',
+        }}
       >
         <g clipPath="url(#paint0_angular_74_829_clip_path)" data-figma-skip-parse="true">
           <g transform="matrix(-0.172519 -0.0318484 0.0318484 -0.172519 237.555 240.097)">

@@ -26,7 +26,11 @@ const RentalPercentage = () => {
         initial={{ rotate: -150, opacity: 0 }}
         whileInView={{ rotate: 0, opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
-        style={{ willChange: 'transform, opacity' }}
+        style={{
+          transformBox: 'fill-box',
+          transformOrigin: 'center',
+          willChange: 'transform, opacity',
+        }}
       >
         <g transform="matrix(0.174636 -0.0167222 0.0167222 0.174636 239.092 238.286)">
           <foreignObject x="-1929.91" y="-1929.91" width="3859.83" height="3859.83">
