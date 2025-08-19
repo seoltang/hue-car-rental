@@ -2,15 +2,21 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useInView } from 'motion/react';
+import { cn } from '@/styles/utils';
 
-const CountingNumber = ({ target, className }: { target: number; className: string }) => {
+type Props = {
+  target: number;
+  duration?: number;
+  className?: string;
+};
+
+const CountingNumber = ({ target, duration = 1, className }: Props) => {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref);
 
   useEffect(() => {
     if (isInView) {
-      const duration = 1000; // 1초
       const steps = 60; // 60프레임
       const increment = target / steps;
       let current = 0;
@@ -23,14 +29,14 @@ const CountingNumber = ({ target, className }: { target: number; className: stri
         } else {
           setCount(Math.floor(current));
         }
-      }, duration / steps);
+      }, (duration * 1000) / steps);
 
       return () => clearInterval(timer);
     }
-  }, [isInView, target]);
+  }, [isInView, target, duration]);
 
   return (
-    <span ref={ref} className={className}>
+    <span ref={ref} className={cn(className)}>
       {count}
     </span>
   );

@@ -16,12 +16,16 @@ const RegisteredCarsNumberSection = () => {
         </p>
 
         <div className="flex justify-center gap-x-3.5 xl:gap-x-15 text-center break-keep">
-          <div className="flex flex-col items-stretch justify-end max-w-[552px]">
+          <div className="flex-1 flex flex-col items-stretch justify-end max-w-[552px]">
             <div className="relative flex flex-col items-center justify-center px-3 xl:px-10">
               <CarPercentage />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-y-2 text-center text-white font-semibold leading-none">
                 <span className="relative w-[2.375rem] md:w-24 xl:w-32">
-                  <CountingNumber target={8} className="text-30 md:text-6xl xl:text-8xl" />
+                  <CountingNumber
+                    target={8}
+                    duration={0.75}
+                    className="text-30 md:text-6xl xl:text-8xl"
+                  />
                   <span className="absolute bottom-1 xl:bottom-2 -right-4 md:-right-5 xl:-right-8 text-10 md:text-lg xl:text-2xl">
                     %
                   </span>
@@ -38,12 +42,16 @@ const RegisteredCarsNumberSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-stretch justify-end max-w-[552px]">
+          <div className="flex-1 flex flex-col items-stretch justify-end max-w-[552px]">
             <div className="relative flex flex-col items-center justify-center px-3 xl:px-10">
               <RentalPercentage />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-y-2 text-center text-white font-semibold leading-none">
                 <span className="relative w-[2.375rem] md:w-24 xl:w-32">
-                  <CountingNumber target={34} className="text-30 md:text-6xl xl:text-8xl" />
+                  <CountingNumber
+                    target={34}
+                    duration={1.25}
+                    className="text-30 md:text-6xl xl:text-8xl"
+                  />
                   <span className="absolute bottom-1 xl:bottom-2 -right-4 md:-right-5 xl:-right-8 text-10 md:text-lg xl:text-2xl">
                     %
                   </span>
