@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import TwoRowText from '../two-row-text';
-import landingImg from '@/assets/images/landing/landing.png';
+import landingImg from '@/assets/images/landing/road-lg.png';
 
 const LandingSectionDesktop = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
