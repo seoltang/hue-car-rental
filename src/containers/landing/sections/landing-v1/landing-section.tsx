@@ -2,10 +2,8 @@
 
 import { useRef } from 'react';
 import Image from 'next/image';
-import { motion, type MotionStyle, useScroll, useTransform } from 'motion/react';
-import landingCarImg from '@/assets/images/landing/landing-car.png';
-import landingBackgroundLargeImg from '@/assets/images/landing/landing-bg-lg.png';
-import landingBackgroundSmallImg from '@/assets/images/landing/landing-bg-sm.png';
+import { motion, useScroll, useTransform } from 'motion/react';
+import landingMoneyImg from '@/assets/images/landing/landing-money.png';
 
 const LandingSection = () => {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -14,11 +12,6 @@ const LandingSection = () => {
     target: sectionRef,
     offset: ['start start', 'end start'],
   });
-
-  const pStyle: MotionStyle = {
-    y: useTransform(scrollYProgress, [0.05, 0.15], [0, -20]),
-    opacity: useTransform(scrollYProgress, [0.05, 0.15], [1, 0]),
-  };
 
   const firstSpanColor = useTransform(
     scrollYProgress,
@@ -39,40 +32,16 @@ const LandingSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative z-0 w-full pt-[calc(100dvh-52px*0.8)] md:pt-[calc(100vh-80px*0.8)] xl:pt-[calc(100vh-180px*0.8)] pb-[33vh] bg-black"
+      className="relative z-0 w-full pt-[calc(100dvh-52px*0.75)] md:pt-[calc(100vh-80px*0.75)] xl:pt-[calc(100vh-180px*0.75)] pb-[33vh] bg-gray-900"
     >
       <Image
-        src={landingBackgroundLargeImg}
+        src={landingMoneyImg}
         priority
-        alt=""
-        width={1920}
-        height={1080}
-        className="fixed top-0 inset-x-0 -z-[3] w-screen h-screen object-cover hidden sm:block"
+        alt="landing-money"
+        width={655}
+        height={655}
+        className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 -z-[1] max-sm:size-48"
       />
-      <Image
-        src={landingBackgroundSmallImg}
-        priority
-        alt=""
-        width={768}
-        height={1475}
-        className="fixed top-0 inset-x-0 -z-[3] w-screen h-screen object-cover sm:hidden"
-      />
-
-      <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 -z-[1] flex flex-col items-center gap-y-10 w-full">
-        <motion.p
-          style={pStyle}
-          className="w-full text-white text-center text-[26px] md:text-[40px] xl:text-[52px] font-extrabold"
-        >
-          차값, 지출하고 계시나요?
-        </motion.p>
-        <Image
-          src={landingCarImg}
-          priority
-          alt=""
-          width={800}
-          className="w-full md:w-[80%] xl:w-auto"
-        />
-      </div>
 
       <h1 className="relative w-full text-white text-center text-[52px] md:text-[80px] xl:text-[180px] font-extrabold flex flex-col items-center">
         <motion.div
