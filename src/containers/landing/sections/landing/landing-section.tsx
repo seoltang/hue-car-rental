@@ -58,7 +58,7 @@ const LandingSection = () => {
         className="fixed top-0 inset-x-0 -z-[3] w-screen h-screen object-cover sm:hidden"
       />
 
-      <div className="fixed left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 -z-[1] flex flex-col items-center gap-y-10 w-full">
+      <div className="fixed top-0 inset-x-0 -z-[1] flex flex-col items-center justify-center gap-y-10 w-full h-screen">
         <motion.p
           style={pStyle}
           className="w-full text-white text-center text-[26px] md:text-[40px] xl:text-[52px] font-extrabold"
