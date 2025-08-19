@@ -16,7 +16,7 @@ const RegisteredCarsNumberSection = () => {
         </p>
 
         <div className="flex justify-center gap-x-3.5 xl:gap-x-15 text-center break-keep">
-          <div className="flex flex-col items-stretch max-w-[552px]">
+          <div className="flex flex-col items-stretch justify-end max-w-[552px]">
             <div className="relative flex flex-col items-center justify-center px-3 xl:px-10">
               <CarPercentage />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-y-2 text-center text-white font-semibold leading-none">
@@ -38,7 +38,7 @@ const RegisteredCarsNumberSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-stretch max-w-[552px]">
+          <div className="flex flex-col items-stretch justify-end max-w-[552px]">
             <div className="relative flex flex-col items-center justify-center px-3 xl:px-10">
               <RentalPercentage />
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-y-2 text-center text-white font-semibold leading-none">

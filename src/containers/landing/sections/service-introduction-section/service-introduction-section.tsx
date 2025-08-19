@@ -18,7 +18,7 @@ const ServiceIntroductionSection = () => {
         </p>
 
         <div className="flex justify-center gap-x-3.5 xl:gap-x-15 text-center break-keep">
-          <div className="flex flex-col items-stretch max-w-[420px]">
+          <div className="flex flex-col items-stretch justify-end max-w-[420px]">
             <Image src={questionMarkImg} alt="물음표" className="-mb-px" />
             <h4 className="px-3 xl:px-5 py-2 xl:py-6 bg-gray-400 rounded-t-lg xl:rounded-t-3xl shadow-[0px_2px_10px_0px_rgba(20,20,20,0.25)] xl:shadow-[0px_6px_30px_0px_rgba(20,20,20,0.25)] flex items-center justify-center text-center text-white text-sm xl:text-38 font-semibold">
               신차를 할부로 구매하면?
@@ -38,7 +38,7 @@ const ServiceIntroductionSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-stretch max-w-[420px]">
+          <div className="flex flex-col items-stretch justify-end max-w-[420px]">
             <Image src={exclamationMarkImg} alt="느낌표" className="-mb-px" />
             <h4 className="px-3 xl:px-5 py-2 xl:py-6 bg-primary-linear rounded-t-lg xl:rounded-t-3xl shadow-[0px_2px_10px_0px_rgba(20,20,20,0.25)] xl:shadow-[0px_6px_30px_0px_rgba(20,20,20,0.25)] flex items-center justify-center text-center text-white text-sm xl:text-38 font-semibold">
               신차를 장기렌트 한다면?
