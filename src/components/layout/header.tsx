@@ -9,7 +9,7 @@ const Header = () => {
   const [visible, setVisible] = useState(false);
 
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   useEffect(() => {
