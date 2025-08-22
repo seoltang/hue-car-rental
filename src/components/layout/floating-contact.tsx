@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { toast } from 'react-toastify';
 import { cn } from '@/styles/utils';
 import { PHONE_NUMBER, KAKAO_URL } from '@/constants';
-import { isMobile } from '@/utils';
 
 const PhoneIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -85,18 +84,13 @@ const FloatingContact = () => {
   const handleClickCall = () => {
     if (typeof window === 'undefined') return;
 
-    if (isMobile()) {
-      window.open(`tel:${PHONE_NUMBER}`, '_blank');
-      return;
-    }
-
     navigator.clipboard
       .writeText(PHONE_NUMBER)
       .then(() => {
         toast('전화번호가 복사되었습니다.', { type: 'success' });
       })
       .catch(() => {
-        alert(PHONE_NUMBER);
+        alert(`전화번호 복사에 실패했습니다. 직접 전화 부탁드립니다.\n${PHONE_NUMBER}`);
       });
   };
 
@@ -124,7 +118,12 @@ const FloatingContact = () => {
       className="fixed right-4 bottom-6 z-50 flex flex-col items-center justify-between rounded-full bg-white/80 ring-1 ring-black/10 shadow-[0px_2.4px_12px_0px_rgba(0,0,0,0.10)] backdrop-blur-[2px] p-2.5"
       aria-label="빠른 상담 및 상단으로 이동"
     >
-      <button type="button" onClick={handleClickCall} aria-label="전화 상담">
+      <button
+        type="button"
+        onClick={handleClickCall}
+        aria-label="전화 상담"
+        className="cursor-pointer"
+      >
         <PhoneIcon className="size-5 mb-5" />
       </button>
 
@@ -139,7 +138,7 @@ const FloatingContact = () => {
         onClick={handleScrollTop}
         aria-label="상단으로 이동"
         className={cn(
-          'transition-all duration-300',
+          'cursor-pointer transition-all duration-300',
           showTop
             ? 'opacity-100 h-5 translate-y-0 pointer-events-auto'
             : 'opacity-0 h-0 translate-y-2 pointer-events-none',
