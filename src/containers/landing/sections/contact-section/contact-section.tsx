@@ -5,17 +5,11 @@ import SectionTitle from '../section-title';
 import ContactButton from './contact-button';
 import callImg from '@/assets/images/landing/contact-call.png';
 import kakaoImg from '@/assets/images/landing/contact-kakaotalk.png';
-import { isMobile } from '@/utils';
 import { PHONE_NUMBER, KAKAO_URL } from '@/constants';
 
 const ContactSection = () => {
   const handleClickCall = () => {
     if (typeof window === 'undefined') return;
-
-    if (isMobile()) {
-      window.open(`tel:${PHONE_NUMBER}`, '_blank');
-      return;
-    }
 
     navigator.clipboard
       .writeText(PHONE_NUMBER)
@@ -23,7 +17,7 @@ const ContactSection = () => {
         toast('전화번호가 복사되었습니다.', { type: 'success' });
       })
       .catch(() => {
-        alert(PHONE_NUMBER);
+        alert(`전화번호 복사에 실패했습니다. 직접 전화 부탁드립니다.\n${PHONE_NUMBER}`);
       });
   };
 
