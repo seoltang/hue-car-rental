@@ -45,6 +45,12 @@
   @media (min-width: 1440px) {
     --header-height: 4.5rem;
   }
+
+  @media (max-width: 768px) {
+    .Toastify__toast {
+      border-radius: 6px;
+    }
+  }
 }
 
 @theme {
